@@ -1,0 +1,52 @@
+/*variables*/
+$font-brand: 'Great Vibes', cursive;
+$font-text: 'Montserrat', sans-serif;
+$font-cursive: 'Poly', serif;
+
+$color-light: white;
+$color-dark: black;
+$color-brand: yellow;
+$color-background: grey;
+
+$transition: all 0.3s ease 0s;
+
+/*Global*/
+body {
+    font-family: $font-text;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 20px;
+    
+    .brand {
+        font-family: $font-brand;
+        color: $color-brand;
+    }
+}
+
+/*Navigation*/
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 24px 16%;
+    a {
+        text-decoration: none;
+    }
+    .nav-links {
+        li {
+            display: inline-block;
+            padding-left: 40px;
+            transition: $transition;
+        }
+    }
+}
+
+/*Welcome*/
+
+header {
+    background-image: url("images\welcome-img.jpg");
+    background-position: cover;
+    width: 100%;
+    height: viewport;
+    border: 2px dashed #333;
+}

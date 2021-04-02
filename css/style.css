@@ -1,2 +1,40 @@
+/*variables*/
+/*Global*/
+body {
+  font-family: "Montserrat", sans-serif;
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 20px;
+}
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
+body .brand {
+  font-family: "Great Vibes", cursive;
+  color: yellow;
+}
+
+/*Navigation*/
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 16%;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+  padding-left: 40px;
+  transition: all 0.3s ease 0s;
+}
+
+/*Welcome*/
+header {
+  background-image: url("imageswelcome-img.jpg");
+  background-position: cover;
+  width: 100%;
+  height: viewport;
+  border: 2px dashed #333;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxZQUFBO0FBWUEsU0FBQTtBQUNBO0VBQ0kscUNBWmdDO0VBYWhDLHdCQUF3QjtFQUN4QixpQkFBaUI7RUFDakIsZUFBZTtBQ1ZuQjs7QURNQTtFQU9RLG1DQW5CMkI7RUFvQjNCLGFBZFk7QUNLcEI7O0FEYUEsYUFBQTtBQUVBO0VBQ0ksYUFBYTtFQUNiLHlCQUF5QjtFQUN6QixpQkFBaUI7QUNYckI7O0FEUUE7RUFLUSxxQkFBcUI7QUNUN0I7O0FESUE7RUFTWSxxQkFBcUI7RUFDckIsa0JBQWtCO0VBQ2xCLDRCQTVCaUI7QUNtQjdCOztBRGNBLFVBQUE7QUFFQTtFQUNJLDhDQUErQztFQUMvQywwQkFBMEI7RUFDMUIsV0FBVztFQUNYLGdCQUFnQjtFQUNoQix1QkFBdUI7QUNaM0IiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
