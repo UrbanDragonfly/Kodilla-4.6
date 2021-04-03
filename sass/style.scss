@@ -14,10 +14,12 @@ $transition: all 1s ease 0s;
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+/*Typography*/
+
 body {
     margin: 0;
-    font-family: $font-text;
-    
+    font-family: $font-text;   
     font-size: 20px;
 }
 h1, li {
@@ -26,14 +28,16 @@ h1, li {
 }
 p {
     font-family: $font-cursive;
-    font-size: 16px;
+    font-size: 14px;
 }
 .about-title {
     font-style: italic;
     font-size: 18px;
+    line-height: 0rem;
 }
 .title {
     font-size: 50px;
+    line-height: 0rem;
 }
 
 /*Navigation*/
@@ -79,7 +83,7 @@ header {
     overflow: hidden;
     width: 100vw;
     height: 670px;
-    border: 2px dashed #333;
+    border: solid 3px red;
     padding: 0;
 }
 
@@ -131,6 +135,15 @@ header {
 
 .services {
     text-align: center;
+    border: solid 3px red;
+    margin-top: 80px;
+    .row {
+        align-items: center;
+        justify-content: center;
+        .col-md-3 {
+            margin: 70px 15px 30px 15px;
+        }
+    }
 }
 i {
     color: $color-brand;
@@ -142,4 +155,10 @@ i {
     width: 70px;
     height: 70px;
     vertical-align: middle;
+}
+.service-type {
+    line-height: 0rem;
+}
+.service-descriptor {
+    letter-spacing: -0.5px;
 }
