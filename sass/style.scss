@@ -8,7 +8,7 @@ $color-dark: black;
 $color-brand: #ffcc33;
 $color-background: grey;
 
-$transition: all 0.3s ease 0s;
+$transition: all 1s ease 0s;
 
 /*Global*/
 *, *::before, *::after {
@@ -17,9 +17,23 @@ $transition: all 0.3s ease 0s;
 body {
     margin: 0;
     font-family: $font-text;
+    
+    font-size: 20px;
+}
+h1, li {
     font-variant: small-caps;
     font-weight: bold;
-    font-size: 20px;
+}
+p {
+    font-family: $font-cursive;
+    font-size: 16px;
+}
+.about-title {
+    font-style: italic;
+    font-size: 18px;
+}
+.title {
+    font-size: 50px;
 }
 
 /*Navigation*/
@@ -35,12 +49,12 @@ body {
         li {
             display: inline-block;
             padding-left: 30px;
-            transition: $transition;
         }
         a {
             color: $color-light;
+            transition: $transition;
             &:hover {
-                color: $color-dark;
+                color: $color-brand;
             }
         }
     }
@@ -107,7 +121,25 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
+    transition: $transition;
     &:hover {
         color: $color-dark;
     }
+}
+
+/*Services*/
+
+.services {
+    text-align: center;
+}
+i {
+    color: $color-brand;
+    font-size: 30px;
+    padding: 15px 10px;
+    border: solid 3px $color-brand;
+    border-radius: 50%;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
 }
