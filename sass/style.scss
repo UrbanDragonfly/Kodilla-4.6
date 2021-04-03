@@ -4,9 +4,10 @@ $font-text: 'Montserrat', sans-serif;
 $font-cursive: 'Poly', serif;
 
 $color-light: white;
+$color-norm: #777777;
 $color-dark: black;
 $color-brand: #ffcc33;
-$color-background: grey;
+$color-background: #f7f7f7;
 
 $transition: all 1s ease 0s;
 
@@ -29,11 +30,13 @@ h1, li {
 p {
     font-family: $font-cursive;
     font-size: 14px;
+    color: $color-norm;
 }
 .about-title {
     font-style: italic;
     font-size: 18px;
     line-height: 0rem;
+    color: $color-norm;
 }
 .title {
     font-size: 50px;
@@ -83,7 +86,6 @@ header {
     overflow: hidden;
     width: 100vw;
     height: 670px;
-    border: solid 3px red;
     padding: 0;
 }
 
@@ -135,30 +137,95 @@ header {
 
 .services {
     text-align: center;
-    border: solid 3px red;
-    margin-top: 80px;
+    margin-top: 125px;
     .row {
         align-items: center;
         justify-content: center;
         .col-md-3 {
             margin: 70px 15px 30px 15px;
+            i {
+                color: $color-brand;
+                font-size: 30px;
+                padding: 15px 10px;
+                border: solid 3px $color-brand;
+                border-radius: 50%;
+                text-align: center;
+                width: 70px;
+                height: 70px;
+                vertical-align: middle;
+            }
+            .service-type {
+                line-height: 0rem;
+            }
+            .service-descriptor {
+                letter-spacing: -0.5px;
+            }
         }
     }
 }
-i {
-    color: $color-brand;
-    font-size: 30px;
-    padding: 15px 10px;
-    border: solid 3px $color-brand;
-    border-radius: 50%;
+
+/*Portfolio*/
+
+.image-1 {
+    background-image: url(../images/portfolio-1.jpg);
+}
+.image-2 {
+    background-image: url(../images/portfolio-2.jpg);
+}
+.image-3 {
+    background-image: url(../images/portfolio-3.jpg);
+}
+.image-4 {
+    background-image: url(../images/portfolio-4.jpg);
+}
+.image-5 {
+    background-image: url(../images/portfolio-5.jpg);
+}
+.image-6 {
+    background-image: url(../images/portfolio-6.jpg);
+}
+.image-1, .image-2, .image-3, .image-4, .image-5, .image-6{
+    background-position: center center;
+    width: 100%;
+    height: 285px;
+    background-color: $color-brand;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.portfolio {
     text-align: center;
-    width: 70px;
-    height: 70px;
-    vertical-align: middle;
+    margin-top: 80px;
+    padding-top: 70px;
+    background-color: $color-background;
+    .row {
+        align-items: center;
+        justify-content: center;
+        .col-md-3 {
+            margin: 70px 15px 5px 15px;
+            padding: 0;
+            .image-info {
+                background-color: $color-light;
+                .image-name {
+                    margin: 0;
+                    padding-top: 30px;
+                }
+                .image-descriptor {
+                    margin: 0;
+                    padding-bottom: 30px;
+                    font-style: italic;
+                }
+            }
+        }
+        
+    }
+    
 }
-.service-type {
-    line-height: 0rem;
+
+@media (min-width: 768px) {
+    .portfolio .row:last-child .col-md-3  {
+        margin-top: 40px;
+        margin-bottom: 110px;
+    }
 }
-.service-descriptor {
-    letter-spacing: -0.5px;
-}
+
