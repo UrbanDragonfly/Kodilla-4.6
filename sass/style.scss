@@ -11,10 +11,13 @@ $color-background: #f7f7f7;
 
 $transition: all 1s ease 0s;
 
+
 /*Global*/
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
 
 /*Typography*/
 
@@ -23,15 +26,18 @@ body {
     font-family: $font-text;   
     font-size: 20px;
 }
+
 h1, li {
     font-variant: small-caps;
     font-weight: bold;
 }
+
 p {
     font-family: $font-cursive;
     font-size: 14px;
     color: $color-norm;
 }
+
 .about-title {
     font-style: italic;
     font-size: 18px;
@@ -42,6 +48,7 @@ p {
     font-size: 50px;
     line-height: 0rem;
 }
+
 
 /*Navigation*/
 
@@ -66,6 +73,7 @@ p {
         }
     }
 }
+
 .brand {
     margin-right: auto;
     padding: 10px 0;
@@ -76,6 +84,7 @@ p {
     letter-spacing: 0.3rem;
 }
 
+
 /*Welcome*/
 
 header {
@@ -83,6 +92,7 @@ header {
     background: $color-dark;
     background-image: url("./../images/welcome-img.jpg");
     background-size: cover;
+    background-position: center;
     overflow: hidden;
     width: 100vw;
     height: 670px;
@@ -113,10 +123,11 @@ header {
         font-size: 100px;
     }
 }
+
 .btn {
     background-color: $color-brand;
     border: none;
-    padding: 15px 50px;
+    padding: 10px 50px 15px;
     text-align: center;
     text-decoration: none;
     font-family: $font-text;
@@ -131,7 +142,20 @@ header {
     &:hover {
         color: $color-dark;
     }
+    &:focus {
+        outline: none;
+    }
 }
+.btn-drop {
+    padding: 0 20px 5px;
+    right: 0;
+    transform: translate(55px);
+    background-color: $color-dark;
+    color: $color-brand;
+    cursor: unset;
+}
+
+
 
 /*Services*/
 
@@ -184,6 +208,7 @@ header {
 .image-6 {
     background-image: url(../images/portfolio-6.jpg);
 }
+
 .image-1, .image-2, .image-3, .image-4, .image-5, .image-6{
     background-position: center center;
     width: 100%;
@@ -222,10 +247,92 @@ header {
     
 }
 
+
+/*Footer*/
+
+footer {
+    padding: 40px 0;
+    p {
+        font-family: $font-text;
+        text-align: right;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .contact {
+        text-align: center;
+        i {
+            background-color: $color-dark;
+            color: $color-light;
+            font-size: 18px;
+            padding: 10px 0;    
+            border-radius: 50%;
+            text-align: center;
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+        }
+    }
+}
+
+
+/*Styles for >768px*/
+
 @media (min-width: 768px) {
     .portfolio .row:last-child .col-md-3  {
         margin-top: 40px;
         margin-bottom: 110px;
     }
+    .btn-drop {
+        display: none;
+    }
 }
 
+
+/*Styles for <768px*/
+
+@media (max-width: 768px) {
+    header {
+        height: 100vh;
+        background-position: 7% top;
+        .brand {
+            font-size: 50px;
+            transform: translateX(-30%);
+        }
+        .welcome {
+            transform: translateY(25%);
+            h1 {
+                line-height: normal;
+            }
+        }
+    }
+    .nav-links {
+        display: none;
+        padding: 0;
+        
+        
+    }
+    .dropdown {
+        &:hover .nav-links {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 0;
+            border-radius: 0 0 5px 5px;
+            transform: translate(60px);
+            li {
+                padding: 0;
+            }
+        }
+        &:hover .btn-drop {
+            color: $color-dark;
+        }
+    }
+    .portfolio .row:last-child .col-md-3:last-child  {
+        margin-bottom: 80px;
+    }
+    footer .row {
+        flex-direction: row-reverse;
+    }
+}
